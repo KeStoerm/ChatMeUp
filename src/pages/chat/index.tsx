@@ -1,3 +1,5 @@
-const Chat: React.FC = () => <div>Chat</div>;
+import { withAuthetication } from "components/withAuthentication/withAuthentication";
+
+const Chat: React.FC = withAuthetication(() => <div>Chat</div>);
 
 export default Chat;

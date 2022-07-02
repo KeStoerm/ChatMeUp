@@ -1,15 +1,16 @@
-import { getAuth, signInWithPopup, GoogleAuthProvider, User, setPersistence, browserLocalPersistence } from "firebase/auth";
-import { firebaseAuth } from "../firebase/clientapp";
+import { signInWithPopup, GoogleAuthProvider, User, browserLocalPersistence, getAuth } from "firebase/auth";
+import { firebaseApp } from "firebaseClient/clientapp";
 
 export let currentUser: User | null;
 
-export const authenticateWithGoogle = () => {
+export const authenticateWithGoogle = async () => {
   const provider = new GoogleAuthProvider();
-  const auth = firebaseAuth;
+  const auth = getAuth(firebaseApp);
 
-  setPersistence(auth, browserLocalPersistence).then(() =>
+  return await auth.setPersistence(browserLocalPersistence).then(() =>
     signInWithPopup(auth, provider)
       .then((result) => {
+        console.log(result)
       }).catch((error) => {
         console.log(error);
       })

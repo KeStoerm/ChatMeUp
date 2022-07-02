@@ -5,10 +5,12 @@ import indexStyles from "./index.module.scss";
 import GoogleAuthButton from "images/google-signin/btn_google_signin_dark_normal_web.png"
 import Image from "next/image";
 import { authenticateWithGoogle } from "utils/authenticationUtils";
+import Router from "next/router";
 
 const Home: NextPage = () => {
   const login = async () => {
-    authenticateWithGoogle();
+    await authenticateWithGoogle();
+    // Router.push("/chat");
   };
 
 
