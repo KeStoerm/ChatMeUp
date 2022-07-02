@@ -4,7 +4,7 @@ import indexStyles from "./index.module.scss";
 
 const Home: NextPage = () => {
   return (
-    <div className="flex justify-center">
+    <div className="min-h-screen flex justify-center bg-light-grey">
       <Head>
         <title>ChatMeUp</title>
         <meta name="description" content="Have an easy chat with ChatMeUp!" />
