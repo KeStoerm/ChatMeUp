@@ -1,10 +1,10 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import { Logo } from "../components/logo/logo";
+import { Logo } from "components/logo/logo";
 import indexStyles from "./index.module.scss";
-import GoogleAuthButton from "../public/images/google-signin/btn_google_signin_dark_normal_web.png"
+import GoogleAuthButton from "images/google-signin/btn_google_signin_dark_normal_web.png"
 import Image from "next/image";
-import { authenticateWithGoogle } from "../utils/authenticationUtils";
+import { authenticateWithGoogle } from "utils/authenticationUtils";
 
 const Home: NextPage = () => {
   const login = async () => {

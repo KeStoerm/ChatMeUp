@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server'
 import type { NextRequest } from 'next/server'
-import { firebaseAuth } from './firebase/clientapp';
+import { firebaseAuth } from './src/firebase/clientapp';
 
 export function middleware(request: NextRequest) {
   const auth = firebaseAuth;
