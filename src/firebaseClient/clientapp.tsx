@@ -1,4 +1,4 @@
-import { FirebaseOptions, getApp, initializeApp } from "@firebase/app";
+import { FirebaseOptions, getApp, initializeApp, FirebaseApp } from "@firebase/app";
 import { getAuth } from "@firebase/auth";
 
 export const firebaseConfig: FirebaseOptions = {
@@ -6,7 +6,7 @@ export const firebaseConfig: FirebaseOptions = {
   authDomain: "chatmeup-fdae5.firebaseapp.com",
 };
 
-function createFirebaseApp() {
+function createFirebaseApp(): FirebaseApp {
   try {
     return getApp();
   } catch {
